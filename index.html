@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application météo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+</head>
+<body class="bg-light min-vh-100 d-flex align-items-center">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card p-4">
+                    <form class="row justify-content-center" name="weatherForm">
+                        <div class="col-auto">
+                            <label for="ville" class="visually-hidden">Nom de la ville</label>
+                            <input type="text" class="form-control form-control-lg text-center rounded-pill" id="ville" name="userCity" placeholder="Nom de la ville..." autofocus>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-lg rounded-pill btn-primary d-inline-flex align-items-center" type="submit"><span class="js-loading d-none spinner-border text-light mr-2"></span>Valider</button>
+                        </div>
+                    </form>
+                    <div class="js-city display-6 text-dark text-center mt-3">Paris</div>
+                    <div class="js-date mb-2 text-muted text-center">Mercredi, 14h54</div>
+                    <div class="text-center">
+                        <div class="display-2 text-dark"><span class="js-temperature">32</span>°C</div>
+                        <div class="row justify-content-center align-items-center text-left mb-3">
+                            <div class="col-auto p-0">
+                                <img class="js-pic" src="http://openweathermap.org/img/wn/10d@2x.png">
+                            </div>
+                            <div class="col-auto p-0">
+                                <div class="js-info">Pluie</div>
+                                <div class="js-info-description text-muted">Pluie de faible intensité</div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><img class="mr-2" src="assets/wind.svg" width="30"> Vent : <span class="js-wind-speed">14</span> km/h</li>
+                        <li class="list-group-item"><img class="mr-2" src="assets/water.svg" width="30"> Humidité : <span class="js-humidity">68</span>%</li>
+                        <li class="list-group-item"><img class="mr-2" src="assets/rain.svg" width="30"> Précipitations : <span class="js-rain">4</span>mm en 1 heure</li>
+                        <li class="list-group-item"><img class="mr-2" src="assets/snow.svg" width="30"> Neige : <span class="js-snow">0</span>mm en 1 heure</li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
